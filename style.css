@@ -59,11 +59,3 @@ body {
     font-size: 13px;
   }
 
-  
-/* Adicione essa regra CSS ao seu arquivo style.css ou na seção <style> do cabeçalho HTML */
-@media (width: 700px) {
-  .container-fluid {
-    overflow-y: auto;
-    max-height: 70vh; /* Ajuste a altura máxima conforme necessário */
-  }
-}
