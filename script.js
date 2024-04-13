@@ -27,7 +27,7 @@ function processarXML(xml) {
         const parser = new DOMParser();
         const xmlDoc = parser.parseFromString(xml, "text/xml");
 
-        const ncms = xmlDoc.getElementsByTagName("NCM"); // Ajuste na tag de acordo com o seu XML
+        const ncms = xmlDoc.getElementsByTagName("NCM");
 
         for (let i = 0; i < ncms.length; i++) {
             const ncm = ncms[i].textContent;

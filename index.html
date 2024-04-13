@@ -37,7 +37,8 @@
       <div class="col-md-6">
         <section id="entrada-arquivo" class="mb-4 p-4 rounded text-center">
          
-          <input type="file" id="arquivo-xml" accept=".xml" class="form-control-file mb-3">
+          <input type="file" id="arquivo-xml" accept=".xml" class="form-control-file mb-3" onchange="handleFileSelection()">
+
           <button id="btn-processar" class="btn btn-primary btn-block"><i class="fas fa-cogs"></i> Processar</button>
         </section>
       </div>
@@ -124,6 +125,17 @@
     document.getElementById('fechar-modal-superior').addEventListener('click', function() {
       document.getElementById('help-modal').style.display = 'none';
     });
+
+    function handleFileSelection() {
+      // Verifica se há arquivos selecionados
+      if (this.files && this.files.length > 0) {
+        // Redefine o padding para 24px
+        this.style.padding = '24px';
+      } else {
+        // Define o padding para 100px
+        this.style.padding = '100px';
+      }
+    }
 
   </script>
   
