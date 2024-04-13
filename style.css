@@ -59,3 +59,7 @@ body {
     font-size: 13px;
   }
 
+  .modal-lg-custom {
+    max-width: 80%; /* Defina a largura desejada, por exemplo, 90% */
+  }
+  
