@@ -63,3 +63,8 @@ body {
     max-width: 80%; /* Defina a largura desejada, por exemplo, 90% */
   }
   
+  #help-button {
+    background: rgb(243, 208, 11);
+    border: none;
+    color: #333;
+  }
