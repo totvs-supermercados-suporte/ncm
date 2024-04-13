@@ -4,9 +4,6 @@ body {
     padding: 0;
     background-color: #f8f9fa;
     box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
     
   .header h1 {
