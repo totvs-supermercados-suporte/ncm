@@ -59,9 +59,11 @@ body {
   }
   
   #help-button {
-    background: rgb(243, 208, 11);
+    background: tomato;
+    font-weight: 500;
+    border-radius: 50px;
     border: none;
-    color: #333;
+    color: white;
   }
 
   #arquivo-xml {
