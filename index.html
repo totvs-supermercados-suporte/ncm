@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +12,8 @@
   <link rel="icon" href="pesquisa.ico" type="image/x-icon">
   <link rel="shortcut icon" href="pesquisa.ico" type="image/x-icon">
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <!-- Custom CSS -->
@@ -19,26 +21,31 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
   <div class="container-fluid">
-   <!-- Botão "Me ajude a usar" -->
-   <button id="help-button" class="btn btn-info float-left" style="margin-top: 10px; border-radius: 50px;"><i class="fas fa-question-circle"></i> manual de uso</button>
+    <!-- Botão "Me ajude a usar" -->
+    <button id="help-button" class="btn btn-info float-left" style="margin-top: 10px; border-radius: 50px;"><i
+        class="fas fa-question-circle"></i> manual de uso</button>
     <br><br>
-   <!-- Conteúdo da página -->
-   <div class="row justify-content-center">
-       <div class="col-md-8 text-center">
-           <h1 class="mt-5 mb-4">Consulta NCM</h1>
-           <label for="arquivo-xml" class="mb-3">Importe seu arquivo XML abaixo</label>
-       </div>
-   </div>
+    <!-- Conteúdo da página -->
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <h1 class="mt-5 mb-4">Consulta NCM</h1>
+        <label for="arquivo-xml" class="mb-3">Importe seu arquivo XML abaixo</label>
+      </div>
+    </div>
 
     <div class="row justify-content-center">
       <div class="col-md-6">
         <section id="entrada-arquivo" class="mb-4 p-4 rounded text-center">
-         
-          <input type="file" id="arquivo-xml" accept=".xml" class="form-control-file mb-3" onchange="handleFileSelection()">
+
+          <input type="file" id="arquivo-xml" accept=".xml" class="form-control-file mb-3"
+            onchange="handleFileSelection()">
 
           <button id="btn-processar" class="btn btn-primary btn-block"><i class="fas fa-cogs"></i> Processar</button>
         </section>
@@ -55,7 +62,7 @@
             </div>
           </section>
         </div>
-        
+
         <div class="col-md-6">
           <section id="consulta-ncm-section">
             <h2 class="text-center">Consulte seu NCM inválido</h2><br>
@@ -70,46 +77,58 @@
   <div class="modal" id="help-modal">
     <div class="modal-dialog modal-lg modal-lg-custom">
       <div class="modal-content">
-      
+
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title">Documentação - Consulta NCM</h4>
           <button type="button" class="close" data-dismiss="modal" id="fechar-modal-superior">&times;</button>
         </div>
-        
+
         <!-- Modal Body -->
         <div class="modal-body modal-text">
           <!-- Documentação -->
           <p><strong>Introdução</strong></p>
-          <p>O Consulta NCM é uma ferramenta desenvolvida para facilitar a validação e consulta de NCMs (Nomenclatura Comum do Mercosul) em lotes. Com esta ferramenta, você pode importar um arquivo XML contendo uma lista de NCMs e verificar sua validade. Além disso, você pode consultar individualmente um NCM inválido para obter mais informações e garantir o cumprimento das regulamentações fiscais.</p>
+          <p>O Consulta NCM é uma ferramenta desenvolvida para facilitar a validação e consulta de NCMs (Nomenclatura
+            Comum do Mercosul) em lotes. Com esta ferramenta, você pode importar um arquivo XML contendo uma lista de
+            NCMs e verificar sua validade. Além disso, você pode consultar individualmente um NCM inválido para obter
+            mais informações e garantir o cumprimento das regulamentações fiscais.</p>
 
           <p><strong>Como usar</strong></p>
           <ol>
-            <li>Na seção "Importe seu arquivo XML abaixo", clique no botão "Selecionar arquivo" e escolha o arquivo XML que contém os NCMs que você deseja validar.</li>
+            <li>Na seção "Importe seu arquivo XML abaixo", clique no botão "Selecionar arquivo" e escolha o arquivo XML
+              que contém os NCMs que você deseja validar.</li>
             <li>Clique no botão "Processar" para iniciar o processo de validação.</li>
-            <li>Após o processamento, a seção "NCMs encontrados" exibirá a lista de NCMs contidos no arquivo XML e sua validade.</li>
-            <li>Para consultar individualmente um NCM inválido, vá para a seção "Consulte seu NCM inválido" e insira o NCM desejado. Uma descrição detalhada será exibida, fornecendo informações úteis sobre o NCM.</li>
-            <li><strong>É importante ressaltar que o número de rejeição de NCM no ERP é o número referente ao XML e não ao item cadastrado no sistema. Por isso, importe o arquivo XML aqui e verifique o número de rejeição nos sistema.</strong></li>
+            <li>Após o processamento, a seção "NCMs encontrados" exibirá a lista de NCMs contidos no arquivo XML e sua
+              validade.</li>
+            <li>Para consultar individualmente um NCM inválido, vá para a seção "Consulte seu NCM inválido" e insira o
+              NCM desejado. Uma descrição detalhada será exibida, fornecendo informações úteis sobre o NCM.</li>
+            <li><strong>É importante ressaltar que o número de rejeição de NCM no ERP é o número referente ao XML e não
+                ao item cadastrado no sistema. Por isso, importe o arquivo XML aqui e verifique o número de rejeição nos
+                sistema.</strong></li>
           </ol>
 
           <p><strong>Contato</strong></p>
-          <p>Se precisar de assistência adicional ou tiver alguma dúvida, entre em contato conosco através do chat do Zendesk</p>
-          
+          <p>Se precisar de assistência adicional ou tiver alguma dúvida, entre em contato conosco através do chat do
+            Zendesk</p>
+
           <p><strong>Requisitos do sistema</strong></p>
-          <p>Para garantir o bom funcionamento do Consulta NCM, verifique se o seu navegador está atualizado para a versão mais recente e se você possui uma conexão estável com a internet.</p>
+          <p>Para garantir o bom funcionamento do Consulta NCM, verifique se o seu navegador está atualizado para a
+            versão mais recente e se você possui uma conexão estável com a internet.</p>
         </div>
-        
+
         <!-- Modal Footer -->
         <div class="modal-footer">
           <p style="font-family: 'JetBrains Mono'; font-size: 13px;">© Desenvolvido por Nicolas Penatti</p>
         </div>
-        
+
       </div>
     </div>
   </div>
 
   <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
   <!-- Font Awesome JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
   <!-- Custom JS -->
@@ -123,11 +142,11 @@
     });
 
     // Fechar modal superior quando o botão de fechar é clicado
-    document.getElementById('fechar-modal-superior').addEventListener('click', function() {
+    document.getElementById('fechar-modal-superior').addEventListener('click', function () {
       document.getElementById('help-modal').style.display = 'none';
     });
-
   </script>
-  
+
 </body>
+
 </html>
