@@ -74,4 +74,12 @@ body {
     padding: 24px; 
     font-size: 15px;
   }
+
+  @media (max-width: 767px) {
+    .modal-content {
+      max-height: calc(100vh - 120px); /* Ajuste conforme necessário */
+      overflow-y: auto;
+    }
+  }
+  
   
