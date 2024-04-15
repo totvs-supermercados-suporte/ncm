@@ -40,8 +40,13 @@ function processarXML(xml) {
         
         // Exibir o elemento após o processamento do XML
         resultadosEiframe.style.display = 'block';
+
+        // Exibir a tag <hr> após o processamento do XML
+        document.getElementById('linha-horizontal').style.display = 'block';
     } catch (e) {
         alert('Erro ao processar o XML:', e.message);
     }
-}
+};
+
+
 
